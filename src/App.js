@@ -1,26 +1,89 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import Card from "./Components/Card/Card";
+import OpenCard from "./Components/OpenCard/OpenCard";
+class App extends Component {
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  constructor(props) {
+    super(props)
+
+      this.openPost1 = this.openPost1.bind(this)
+  };
+  state = {
+    data: null,
+    post: "",
+      PostOnClick:null
+
+  };
+
+  componentDidMount() {
+
+      fetch('https://jsonplaceholder.typicode.com/posts')
+          .then(respons => respons.json())
+          .then(result => {
+
+
+            this.setState({data: result})
+
+          })
+
+  }
+
+
+
+  openPost1=(id)=>{
+      const posts = [...this.state.data];
+      const post = posts.find(post => post.id === id)
+      console.log( post)
+    this.setState({PostOnClick:post})
+
+  };
+
+
+
+
+  render() {
+    const {data,PostOnClick} = this.state
+
+
+    return (
+        <div className="App">
+
+            <div className="border1">
+                {
+                    data ? data.map(i => {
+                            return <Card title={i.title} body={i.body} key={i.id} PostOpen={this.openPost1} />
+                        })
+                        : "Loading"
+                }
+            </div>
+
+
+            <div className="border2">
+
+                {
+                    PostOnClick ?   PostOnClick.map(i => {
+                        return <OpenCard  title={i.title} body={i.body} key={i.id}/>})
+                        :
+                        "open post"
+
+                }
+            </div>
+
+            </div>
+
+
+
+
+
+
+
+
+    )
+
+  }
+
 }
+
 
 export default App;

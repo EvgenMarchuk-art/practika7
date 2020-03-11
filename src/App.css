@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  display: flex;
 }
 
 .App-logo {
@@ -13,7 +14,22 @@
   }
 }
 
+.border1{
+
+justify-content: right;
+  width: 50%;
+  border: darkblue solid 2px;
+}
+.border2{
+
+  justify-content: left;
+  width: 50%;
+  height: 100%;
+  border: darkred solid 2px;
+}
+
 .App-header {
+
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
