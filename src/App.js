@@ -34,16 +34,16 @@ class App extends Component {
   openPost1=(id)=>{
       const posts = [...this.state.data];
       const post = posts.find(post => post.id === id)
-      console.log( post)
     this.setState({PostOnClick:post})
 
+      console.log(post)
   };
 
 
 
 
   render() {
-    const {data,PostOnClick} = this.state
+    const {data} = this.state
 
 
     return (
@@ -52,7 +52,7 @@ class App extends Component {
             <div className="border1">
                 {
                     data ? data.map(i => {
-                            return <Card title={i.title} body={i.body} key={i.id} PostOpen={this.openPost1} />
+                            return <Card user={i} title={i.title} body={i.body} key={i.id}  id={i.id}  PostOpen={this.openPost1} />
                         })
                         : "Loading"
                 }
@@ -61,16 +61,15 @@ class App extends Component {
 
             <div className="border2">
 
-                {
-                    PostOnClick ?   PostOnClick.map(i => {
-                        return <OpenCard  title={i.title} body={i.body} key={i.id}/>})
-                        :
-                        "open post"
 
-                }
-            </div>
+                          <OpenCard post={this.state.PostOnClick}  id={this.state.id} />
+
+
 
             </div>
+
+
+        </div>
 
 
 
