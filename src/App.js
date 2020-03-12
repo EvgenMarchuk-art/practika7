@@ -21,10 +21,7 @@ class App extends Component {
       fetch('https://jsonplaceholder.typicode.com/posts')
           .then(respons => respons.json())
           .then(result => {
-
-
             this.setState({data: result})
-
           })
 
   }
@@ -33,17 +30,18 @@ class App extends Component {
 
   openPost1=(id)=>{
       const posts = [...this.state.data];
-      const post = posts.find(post => post.id === id)
-    this.setState({PostOnClick:post})
 
-      console.log(post)
+      const post = posts.find(post => post.id === id)
+      this.setState({PostOnClick:post})
+
   };
 
 
 
 
+
   render() {
-    const {data} = this.state
+    const {data,PostOnClick} = this.state
 
 
     return (
@@ -61,8 +59,16 @@ class App extends Component {
 
             <div className="border2">
 
+                {
+                    PostOnClick !== null ?
+                        <OpenCard Post={this.state.PostOnClick}/>
+                        : "Please, click on the button"
+                }
 
-                          <OpenCard post={this.state.PostOnClick}  id={this.state.id} />
+
+
+
+
 
 
 
