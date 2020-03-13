@@ -12,8 +12,8 @@ class App extends Component {
   state = {
     data: null,
     post: "",
-      PostOnClick:null
-
+      PostOnClick:null,
+      isVisible : true
   };
 
   componentDidMount() {
@@ -37,14 +37,23 @@ class App extends Component {
 
 
 
-  openPost1=(id)=>{
+  openPost1=(id)=> {
       const posts = [...this.state.data];
 
-      const post = posts.find(post => post.id === id)
-      this.setState({PostOnClick:post})
+      const post = posts.find(post => post.id === id);
       post.isVisible = !post.isVisible
+     if(!post.isVisible) {
+         this.setState({PostOnClick:post })
+     } if (post.isVisible){
+          this.setState({PostOnClick:null })
+      }
 
-  };
+
+
+
+
+
+  }
 
 
 
@@ -70,8 +79,8 @@ class App extends Component {
             <div className="border2">
 
                 {
-                    PostOnClick !== null ?
-                        <OpenCard Post={this.state.PostOnClick}/>
+                         PostOnClick !== null ?
+                        <OpenCard Post={this.state.PostOnClick } />
                         : "Please, click on the button"
                 }
 
