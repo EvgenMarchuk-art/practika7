@@ -21,7 +21,16 @@ class App extends Component {
       fetch('https://jsonplaceholder.typicode.com/posts')
           .then(respons => respons.json())
           .then(result => {
-            this.setState({data: result})
+
+
+              const posts = result.map(post => {
+                      post.isVisible = true;
+                      post.IsChecked = false;
+                      return post
+                  },
+              );
+
+              this.setState({data: posts});
           })
 
   }
@@ -33,6 +42,7 @@ class App extends Component {
 
       const post = posts.find(post => post.id === id)
       this.setState({PostOnClick:post})
+      post.isVisible = !post.isVisible
 
   };
 

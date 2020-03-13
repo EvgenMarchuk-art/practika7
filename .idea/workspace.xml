@@ -4,7 +4,7 @@
     <list default="true" id="cc550f9b-d2db-4f83-9def-136d9d5ce2c0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/OpenCard/OpenCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/OpenCard/OpenCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Card/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Card/Card.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +65,7 @@
       <updated>1583855178068</updated>
       <workItem from="1583855180139" duration="24540000" />
       <workItem from="1584012029284" duration="8717000" />
+      <workItem from="1584039874985" duration="1432000" />
     </task>
     <task id="LOCAL-00001" summary="ap">
       <created>1583926374605</created>
@@ -94,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584030095500</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="apd">
+      <created>1584039945941</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1584039945941</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,10 +118,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="481" y="260" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1583857149379" />
-    <state x="308" y="52" key="CommitChangelistDialog2" timestamp="1584030095138">
+    <state x="308" y="52" key="CommitChangelistDialog2" timestamp="1584039945425">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="308" y="52" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1584030095138" />
+    <state x="308" y="52" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1584039945425" />
     <state x="591" y="350" key="Github.ShareDialog" timestamp="1583917908560">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -138,9 +146,9 @@
     </state>
     <state width="1419" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1584022308830" />
     <state width="1419" height="245" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1584036686940" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1584030100376">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1584039950284">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1584030100376" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1584039950284" />
   </component>
 </project>
